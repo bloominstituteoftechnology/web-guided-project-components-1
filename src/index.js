@@ -57,7 +57,7 @@ function makePanel(/* what data does the panel need? */) {
   //  - the contents need to show (the 'toggle-on' class name controls this)
 
 
-  // don't forget to return something!
+  // don't forget to return the panel!
   return null
 }
 
