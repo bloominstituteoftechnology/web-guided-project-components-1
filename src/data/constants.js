@@ -1,2 +1,7 @@
-export const open = '\u25bc'
-export const close = '\u25b2'
+const open = '\u25bc'
+const close = '\u25b2'
+
+export default {
+  open: open,
+  close: close,
+}

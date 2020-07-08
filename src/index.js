@@ -1,6 +1,6 @@
 // TASK 1- Import the data we need to "hydrate" our component
 //  On the one hand, the default export from data/panelData.js
-//  On the other hand, two NAMED exports (open and close) from data/constants.js
+//  On the other hand, the default export from data/constants.js
 
 
 // TASK 2- Verify our imports using log statements
