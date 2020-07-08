@@ -4,7 +4,7 @@
 
 
 // TASK 2- Verify our imports using log statements
-console.log() // log the title meant for the first panel
+console.log() // log the panelData
 console.log() // log the open arrow
 console.log() // log the close arrow
 
@@ -25,8 +25,8 @@ function makePanel(/* what data does the panel need? */) {
   const panelContent = null
   const panelTitle = null
   const panelButtons = null
-  const panelOpenButton = null
-  const panelCloseButton = null
+  const openButton = null
+  const closeButton = null
 
 
   // TASK 6- Setup the structure of our elements
@@ -35,8 +35,8 @@ function makePanel(/* what data does the panel need? */) {
       <div>                 // panelBar
         <h3></h3>           // panelTitle
         <div>               // panelButtons 
-          <button></button> // panelOpenButton
-          <button></button> // panelCloseButton
+          <button></button> // openButton
+          <button></button> // closeButton
         </div>
       </div>
       <div></div>           // panelContent
