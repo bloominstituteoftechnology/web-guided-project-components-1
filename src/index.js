@@ -1,3 +1,13 @@
+// TASK 0- Motivate demoing a small makeImage component
+//  that takes an { imgURL } and returns an img element.
+//  Then loop over these URLs making images as you go:
+const imageData = [
+  { imageURL: 'https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_978.jpg' },
+  { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_3398.jpg' },
+  { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_2947.jpg' },
+]
+
+
 // TASK 1- Import the data we need to "hydrate" our component
 //  On the one hand, the default export from data/panelData.js
 //  On the other hand, the default export from data/constants.js
