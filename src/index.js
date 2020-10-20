@@ -8,9 +8,10 @@ const imageData = [
 ]
 
 
-// TASK 1- Import the data we need to "hydrate" our component
+// TASK 1- Import the data we need to "hydrate" our component.
 //  On the one hand, the default export from data/panelData.js
 //  On the other hand, the default export from data/constants.js
+//  Destructure `open` and `close` from the constants
 
 
 // TASK 2- Verify our imports using log statements
@@ -55,6 +56,7 @@ function makePanel(/* what data does the panel need? */) {
 
 
   // TASK 7- Add proper class names to our elements (See index.html for reference)
+  // paying attention to the elements that need to start out hidden
 
 
   // TASK 8- Set text content using arguments as raw material
@@ -72,9 +74,9 @@ function makePanel(/* what data does the panel need? */) {
 }
 
 
-// TASK 10- Loop through the panelData in the data folder
-//  creating panels for each content and title,
-//  and append them to the DOM
+// TASK 10- Loop through the panelData we imported from the data folder
+//  creating panels for each content and title and append them to the DOM.
+//  We can do this with a single forEach, or with a map and a forEach.
 
 
 // [STRETCH] Comment out the links inside the nav and

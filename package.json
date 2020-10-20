@@ -6,17 +6,12 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^7.8.1",
+    "eslint": "^7.11.0",
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LambdaSchool/web-guided-project-components-1.git"
-  },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/LambdaSchool/web-guided-project-components-1/issues"
-  },
-  "homepage": "https://github.com/LambdaSchool/web-guided-project-components-1#readme"
+  }
 }
