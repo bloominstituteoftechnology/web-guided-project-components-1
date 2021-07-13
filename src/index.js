@@ -42,23 +42,25 @@ imageData.forEach(imageDataObject => {
 //  On the one hand, the default export from data/panelData.js
 //  On the other hand, the default export from data/constants.js
 //  Destructure `open` and `close` from the constants
+import panelData from './data/panelData'
+import myArbitraryName from './data/constants'
 
+const { open, close } = myArbitraryName
 
 // TASK 2- Verify our imports using log statements
-console.log() // log the panelData
-console.log() // log the open arrow
-console.log() // log the close arrow
+console.log(panelData) // log the panelData
+console.log(open) // log the open arrow
+console.log(close) // log the close arrow
 
 
 // TASK 3- Comment out the div.panel from index.html and grab its parent element.
 //  We will generate the panel with code, and we'll need the parent
 //  so we can append the code-generated panel to the DOM.
-const accordion = null
-
+const accordion = document.querySelector('.accordion'); 
 
 // TASK 4- Create a function 'makePanel' that creates a panel exactly as you see it in the HTML.
-function makePanel(/* what data does the panel need? */) {
-
+function makePanel({ title, content }) {
+  // const { title, content } = panelDataObject
 
   // TASK 5- Instantiate all the elements needed for a panel
   const panel = null
