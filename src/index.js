@@ -107,31 +107,48 @@ function makePanel({ title, content }) {
 
   // TASK 8- Set text content using arguments as raw material
   //  and also using the open and close arrows imported at the top of the file
-
+  panelTitle.textContent = title
+  panelContent.textContent = content
+  openButton.textContent = open
+  closeButton.textContent = close
 
   // TASK 9- When the 'open' or 'close' buttons are clicked, the content is toggled on/off:
   //  - the open button needs to go away (the 'hide-btn' class name controls this)
   //  - the close button needs to show (the 'hide-btn' class name controls this)
   //  - the contents need to show (the 'toggle-on' class name controls this)
 
+  panelButtons.addEventListener('click', (event) => {
+    // if open button has 'hide-btn' class, remove, otherwise, add
+    openButton.classList.toggle('hide-btn')
+    // if close button has 'hide-btn' class, remove, otherwise, add
+    closeButton.classList.toggle('hide-btn')
+
+    // if the contents has the 'toggle-on' class, remove it, otherwise add it
+    panelContent.classList.toggle("toggle-on");
+  })
 
   // don't forget to return the panel!
-  return null
+  return panel
 }
 
-makePanel({ title: "Black Widow", content: "Natasha scarjo" })
+const panel = makePanel({ title: "Black Widow", content: "Natasha scarjo rocks and returns to her roots" })
 
-panelData.forEach(panelDataObj => {
-  // 1. use our makePanel component to create a panel
-
-  // 2. Attach our new UI component to the DOM
-
-})
+accordion.appendChild(panel)
 
 // TASK 10- Loop through the panelData we imported from the data folder
 //  creating panels for each content and title and append them to the DOM.
 //  We can do this with a single forEach, or with a map and a forEach.
 
+panelData.forEach(panelDataObj => {
+  // 1. use our makePanel component to create a panel
+  const panel = makePanel(panelDataObj)
+  // 2. Attach our new UI component to the DOM
+  accordion.append(panel)
+})
+
+
+// const panelArray = panelData.map(panelDataObj => makePanel(panelDataObj))
+// panelArray.forEach(finishedComponent => accordion.append(finishedComponent))
 
 // [STRETCH] Comment out the links inside the nav and
 // write a linkMaker that takes { href, className, text }
