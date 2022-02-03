@@ -6,7 +6,7 @@ This project is set up with [Parcel Bundler](https://parceljs.org/), an npm pack
 that compiles our frontend assets and comes with an integrated development server.
 
 The dev server runs on `http://localhost:1234` by default, but will use another port
-number if `1234` is being used by another application.
+number if `1234` is being used by another application. Parcel will indicate in the terminal which port it is using.
 
 - Clone the repo.
 - Navigate into the project folder.
