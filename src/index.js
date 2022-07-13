@@ -7,17 +7,43 @@ const imageData = [
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_2947.jpg' },
 ]
 
+// Component -> FUNCTION
+function makeImage({ imageURL }) {
+  // const imageURL = imgObj.imageURL
+  const image = document.createElement("img");
+  image.src = imageURL;
+  image.style.height = "10em";
+  return image;
+}
+
+imageData.forEach(img => {
+  const imgElem = makeImage(img);
+  // document.body.prepend(imgElem);
+})
+
+/**
+ * for (let i = 0; i < imageData.length; i++) {
+ *   const imgElem = makeImage(imageData[i]);
+ *   document.body.prepend(imgElem);
+ * }
+ */
 
 // TASK 1- Import the data we need to "hydrate" our component.
 //  On the one hand, the default export from data/panelData.js
 //  On the other hand, the default export from data/constants.js
 //  Destructure `open` and `close` from the constants
+import panelData from "./data/panelData";
+import linkData from "./data/linkData";
+import constants from "./data/constants";
 
+const { open, close } = constants;
+// const open = constants.open;
+// const close = constants.close;
 
 // TASK 2- Verify our imports using log statements
-console.log() // log the panelData
-console.log() // log the open arrow
-console.log() // log the close arrow
+console.log(panelData); // log the panelData
+console.log(linkData); // log the open arrow
+console.log(open, close); // log the close arrow
 
 
 // TASK 3- Comment out the div.panel from index.html and grab its parent element.
@@ -53,6 +79,21 @@ function makePanel(/* what data does the panel need? */) {
       <div></div>           // panelContent
     </div>
   */
+
+    /**
+        <div class="panel">
+          <div class="panel-bar">
+            <h3>Title of Panel</h3>
+            <div class="panel-buttons">
+              <button class="panel-btn-open">&#9660</button>
+              <button class="panel-btn-close hide-btn">Close</button>
+            </div>
+          </div>
+          <div class="panel-content toggle-on">
+            Content of panel
+          </div>
+        </div>
+     */
 
 
   // TASK 7- Add proper class names to our elements (See index.html for reference)
