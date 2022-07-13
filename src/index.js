@@ -67,18 +67,12 @@ function makePanel({ title, content }) {
   const closeButton = document.createElement("button");
 
   // TASK 6- Setup the structure of our elements
-  /*
-    <div>                   // panel
-      <div>                 // panelBar
-        <h3></h3>           // panelTitle
-        <div>               // panelButtons 
-          <button></button> // openButton
-          <button></button> // closeButton
-        </div>
-      </div>
-      <div></div>           // panelContent
-    </div>
-  */
+  panel.appendChild(panelBar); // <div><div></div></div>
+  panel.appendChild(panelContent); // <div><div></div><div></div></div>
+  panelBar.appendChild(panelTitle);
+  panelBar.appendChild(panelButtons);
+  panelButtons.appendChild(openButton);
+  panelButtons.appendChild(closeButton);
 
     /**
         <div class="panel">
@@ -98,11 +92,20 @@ function makePanel({ title, content }) {
 
   // TASK 7- Add proper class names to our elements (See index.html for reference)
   // paying attention to the elements that need to start out hidden
+  panel.classList.add("panel");
+  panelBar.classList.add("panel-bar");
+  panelButtons.classList.add("panel-buttons");
+  openButton.classList.add("panel-btn-open");
+  closeButton.classList.add("panel-btn-close", "hide-btn");
+  panelContent.classList.add("panel-content");
 
 
   // TASK 8- Set text content using arguments as raw material
   //  and also using the open and close arrows imported at the top of the file
-
+  panelTitle.textContent = title;
+  panelContent.textContent = content;
+  openButton.textContent = open;
+  closeButton.textContent = close;
 
   // TASK 9- When the 'open' or 'close' buttons are clicked, the content is toggled on/off:
   //  - the open button needs to go away (the 'hide-btn' class name controls this)
@@ -111,7 +114,7 @@ function makePanel({ title, content }) {
 
 
   // don't forget to return the panel!
-  return null
+  return panel;
 }
 const testPanel = makePanel({ title: "foo", content: "bar" });
 accordion.appendChild(testPanel);
