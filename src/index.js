@@ -140,3 +140,33 @@ panelElements.forEach(panelElement => {
 // and returns an anchor tag with the right href, class and textContent.
 // Loop over the 'linkData' in the data folder, generate anchor tags
 // and append them to the nav.
+/**
+        <a href="#" class="nav-item">Home</a>
+        <a href="#" class="nav-item">About</a>
+        <a href="#" class="nav-item">Blog</a>
+        <a href="#" class="nav-item">Contact</a>
+ */
+// WAT IS A COMPONENT?!?!?!?!?!?!?!?!?!?!?! A FUNCTION
+function linkMaker({ href, className, text }) {
+  // STEP 1
+  // create the element(s)
+  const link = document.createElement("a");
+  // STEP 2
+  // update href, class, and textContent
+  link.href = href;
+  link.classList.add(className);
+  // link.className = className;
+  link.textContent = text;
+  // STEP 3
+  // DON'T FORGET TO RETUUUUURN!
+  return link;
+}
+
+// const linkElem = linkMaker({ href: "https://caseyharding.com", className: "nav-item", text: "BLAH"});
+// document.querySelector("nav").appendChild(linkElem);
+const nav = document.querySelector("nav");
+
+linkData.forEach(linkObj => {
+  const linkElem = linkMaker(linkObj);
+  nav.appendChild(linkElem);
+})
